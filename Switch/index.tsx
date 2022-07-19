@@ -36,8 +36,6 @@ function Index({
         disabled ? s.disabled : '',
     ];
 
-    console.log(classNames)
-
     return (
         <div className={classNames.join(' ')}>
             <label>
