@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import s from './switch.module.scss';
+import s from './styles.module.scss';
 
 interface SwitchProps {
     checked?: boolean;

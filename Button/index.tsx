@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Button.module.scss';
+import s from './styles.module.scss';
 
 interface ButtonPropType {
     variant: 'primary' | 'outlined' | 'link';
