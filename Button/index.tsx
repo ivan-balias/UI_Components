@@ -10,7 +10,7 @@ interface ButtonPropType {
     size?: 'small'| 'medium' | 'large';
 }
 
-const Button = ({children, cb, variant = 'primary', color = '', disabled = false, size = 'medium'}: ButtonPropType) => {
+const Index = ({children, cb, variant = 'primary', color = '', disabled = false, size = 'medium'}: ButtonPropType) => {
     const classNames = [
         s.btn,
         s[variant],
@@ -35,4 +35,4 @@ const Button = ({children, cb, variant = 'primary', color = '', disabled = false
     );
 };
 
-export default Button;
+export default Index;
