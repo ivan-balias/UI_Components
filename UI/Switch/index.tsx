@@ -11,7 +11,7 @@ interface SwitchProps {
     disabled?: boolean;
 }
 
-function Index({
+function Switch({
                    checked = false,
                    change,
                    size = 'medium',
@@ -48,4 +48,4 @@ function Index({
     );
 }
 
-export default Index;
+export default Switch;
