@@ -2,15 +2,15 @@ import React from 'react';
 import s from './styles.module.scss';
 
 interface ButtonPropType {
-    variant: 'primary' | 'outlined' | 'link';
-    cb: any;
-    children?: React.ReactNode;
-    color?: 'secondary' | 'error' | 'success' | '';
+    variant?: 'filled' | 'outlined' | 'link';
+    click?: ()=>void;
+    label?: string;
+    color?: 'primary' | 'secondary' | 'error' | 'success' ;
     disabled?: boolean;
     size?: 'small'| 'medium' | 'large';
 }
 
-const Index = ({children, cb, variant = 'primary', color = '', disabled = false, size = 'medium'}: ButtonPropType) => {
+const Button = ({label='', click=()=>{}, variant = 'filled', color = 'primary', disabled = false, size = 'medium'}: ButtonPropType) => {
     const classNames = [
         s.btn,
         s[variant],
@@ -21,7 +21,7 @@ const Index = ({children, cb, variant = 'primary', color = '', disabled = false,
 
     const submitHandler = (e: any) => {
         e.preventDefault()
-        cb()
+        click()
     }
 
     return (
@@ -30,9 +30,9 @@ const Index = ({children, cb, variant = 'primary', color = '', disabled = false,
             className={classNames.join(' ')}
             disabled={disabled}
         >
-            {children}
+            {label}
         </button>
     );
 };
 
-export default Index;
+export default Button;
