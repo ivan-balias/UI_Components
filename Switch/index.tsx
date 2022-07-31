@@ -3,28 +3,25 @@ import s from './styles.module.scss';
 
 interface SwitchProps {
     checked?: boolean;
-    change?: any;
-    size?: 'small' | 'medium' ;
+    change?: () => void;
+    size?: 'small' | 'medium';
     color?: 'primary' | 'secondary' | 'warning' | 'default';
     label?: string;
     labelPosition?: 'top' | 'bottom' | 'left' | 'right';
     disabled?: boolean;
-    defaultChecked?: boolean;
 }
 
-function Index({
+function Switch({
                    checked = false,
-                   defaultChecked = false,
                    change,
                    size = 'medium',
                    color = 'default',
                    label = '',
                    labelPosition = 'right',
                    disabled = false
-               }: SwitchProps)
-{
+               }: SwitchProps) {
 
-    const [check, setCheck] = useState(defaultChecked ?? checked);
+    const [check, setCheck] = useState(checked);
 
     const classNames = [
         s.switch,
@@ -51,4 +48,4 @@ function Index({
     );
 }
 
-export default Index;
+export default Switch;
