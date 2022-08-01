@@ -1,6 +1,7 @@
 .switch {
   display: flex;
   gap: 10px;
+  font-family: 'Roboto', sans-serif;
 
   label {
     width: 48px;
@@ -58,29 +59,28 @@
 .top {
   flex-direction: column-reverse;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 2px;
-
 }
 
 .left {
   flex-direction: row-reverse;
   align-items: center;
+  justify-content: start;
 }
 
 .right {
   flex-direction: row;
   align-items: center;
-
+  justify-content: start;
 }
 
 .bottom {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 2px;
 }
-
 
 .primary {
   label {
@@ -113,16 +113,18 @@
 
   &.small {
 
-    span {
-      height: 10px;
-      width: 30px;
-      transition: .4s;
-
-      &::before {
-        height: 15px;
-        width: 15px;
-        left: -2px;
+    label{
+      span {
+        height: 10px;
+        width: 30px;
         transition: .4s;
+
+        &::before {
+          height: 15px;
+          width: 15px;
+          left: -2px;
+          transition: .4s;
+        }
       }
     }
 
@@ -171,16 +173,18 @@
 
   &.small {
 
-    span {
-      height: 10px;
-      width: 30px;
-      transition: .4s;
-
-      &::before {
-        height: 15px;
-        width: 15px;
-        left: -2px;
+    label{
+      span {
+        height: 10px;
+        width: 30px;
         transition: .4s;
+
+        &::before {
+          height: 15px;
+          width: 15px;
+          left: -2px;
+          transition: .4s;
+        }
       }
     }
 
@@ -229,16 +233,18 @@
 
   &.small {
 
-    span {
-      height: 10px;
-      width: 30px;
-      transition: .4s;
-
-      &::before {
-        height: 15px;
-        width: 15px;
-        left: -2px;
+    label{
+      span {
+        height: 10px;
+        width: 30px;
         transition: .4s;
+
+        &::before {
+          height: 15px;
+          width: 15px;
+          left: -2px;
+          transition: .4s;
+        }
       }
     }
 
@@ -259,6 +265,7 @@
     input {
       &:checked + span {
         background: rgba(0, 0, 0, 0.3);
+
         &::before {
           background: white;
 
@@ -285,18 +292,20 @@
 
   &.small {
 
-    span {
-      height: 10px;
-      width: 30px;
-      transition: .4s;
+   label{
+     span {
+       height: 10px;
+       width: 30px;
+       transition: .4s;
 
-      &::before {
-        height: 15px;
-        width: 15px;
-        left: -2px;
-        transition: .4s;
-      }
-    }
+       &::before {
+         height: 15px;
+         width: 15px;
+         left: -2px;
+         transition: .4s;
+       }
+     }
+   }
 
     input {
 
