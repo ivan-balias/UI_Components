@@ -1,40 +1,41 @@
-import React, {ReactChildren, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import s from './styles.module.scss';
 
 interface BadgeProps {
     color?: 'secondary' | 'success' | 'default';
     value?: number;
-    variant?: 'dot';
+    type?: 'dot' | 'num';
     children: ReactNode;
-    vertical: 'top' | 'bottom';
-    horizontal: 'left' | 'right';
-
+    vertical?: 'top' | 'bottom';
+    horizontal?: 'left' | 'right';
+    size?: 'small' | 'medium' | 'large'
 }
 
 const Badge = ({
                    color = 'default',
-                   value = 0,
-                   variant = 'dot',
+                   value = -1,
                    vertical = 'top',
                    horizontal = 'right',
-                   children
+                   children,
+                   type = 'num',
+                   size = 'medium'
                }: BadgeProps) => {
 
     const badgeValue = value > 99 ? '99+' : value
 
-
     const classes = [
         s.badge,
-        s[variant],
         s[color],
+        s[type],
+        s[size],
+        s[vertical],
+        s[horizontal]
     ]
 
-
     return (
-        <div style={{position: 'relative'}}>
-            <div
-                style={{position: 'absolute', right: 0, top: -10, background: 'red', padding: 5, borderRadius: '100%'}}>
-                <span>{badgeValue}</span>
+        <div className={classes.join(' ')}>
+            <div>
+                {value > 0 && <span>{badgeValue}</span>}
             </div>
             {children}
         </div>

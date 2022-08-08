@@ -11,7 +11,7 @@ interface AvatarProps {
     bg?: string;
 }
 
-export const Alert = ({thumb=null, bg='#2c3ea6',name='',surname='', cb=null, size='medium', type='circle'}: AvatarProps) => {
+ const Avatar = ({thumb=null, bg='#2c3ea6',name='',surname='', cb=null, size='medium', type='circle'}: AvatarProps) => {
 
     const fullName = () => {
         const fullName:string[] = [];
@@ -31,9 +31,11 @@ export const Alert = ({thumb=null, bg='#2c3ea6',name='',surname='', cb=null, siz
     ];
 
     return (
-        <div onClick={cb} style={{backgroundColor: bg}} className={classes.join(' ')}>
+        <div onClick={cb} style={{background: bg}} className={classes.join(' ')}>
             {thumb && <i style={{backgroundImage:`url(${thumb})`}}></i>}
             {!thumb && fullName() && <span>{fullName()}</span>}
         </div>
     )
 }
+
+export default Avatar;

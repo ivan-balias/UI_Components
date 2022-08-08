@@ -1,0 +1,75 @@
+.badge {
+  position: relative;
+  display: flex;
+  height: max-content;
+  color: white;
+
+  div {
+    position: absolute;
+    border-radius: 30px;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+
+    span {
+      padding: 0 6px;
+      display: block;
+    }
+  }
+}
+
+.bottom {
+  align-items: end;
+
+  div {
+    bottom: -6px;
+  }
+}
+
+.right {
+  justify-content: end;
+
+  div {
+    right: -10px;
+  }
+}
+
+.top {
+  align-items: start;
+
+  div {
+    top: -6px;
+  }
+}
+
+.left {
+  justify-content: start;
+
+  div {
+    left: -10px;
+  }
+}
+
+.secondary {
+  div {
+    background: purple;
+  }
+}
+
+.success {
+  div {
+    background: green;
+  }
+
+}
+
+.default {
+  div {
+    background: blue;
+  }
+}
+
+
+
+
+
